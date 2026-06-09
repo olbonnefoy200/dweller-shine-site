@@ -14,8 +14,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const PHONE = "020 0000 0000";
-const PHONE_HREF = "tel:+442000000000";
+const PHONE = "07523 805337";
+const PHONE_HREF = "tel:+447523805337";
 
 const services = [
   { icon: Home, title: "End of Tenancy", desc: "Deposit-back cleans for tenants, landlords and letting agents. From £140 for a 1-bed flat." },
