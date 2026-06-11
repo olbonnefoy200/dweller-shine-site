@@ -20,8 +20,8 @@ export const Route = createFileRoute("/")({
 
 const PHONE = "07523 805337";
 const PHONE_HREF = "tel:+447523805337";
-const EMAIL = "segunadedirandonald@gmail.com";
-const EMAIL_HREF = "mailto:segunadedirandonald@gmail.com";
+const EMAIL = "info@dwellerenvironmentalservice.com";
+const EMAIL_HREF = "mailto:info@dwellerenvironmentalservice.com";
 const WEBSITE = "www.dwellerenvironmental.com";
 
 const services = [
