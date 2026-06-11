@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
-import { Phone, MapPin, Mail, ShieldCheck, Sparkles, Droplets, HardHat, Trash2, Wrench, CloudRain, Check } from "lucide-react";
+import { Phone, MapPin, Mail, ShieldCheck, Sparkles, Droplets, HardHat, Trash2, Check, Globe } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -18,14 +18,48 @@ const PHONE = "07523 805337";
 const PHONE_HREF = "tel:+447523805337";
 const EMAIL = "segunadedirandonald@gmail.com";
 const EMAIL_HREF = "mailto:segunadedirandonald@gmail.com";
+const WEBSITE = "www.dwellerenvironmental.com";
 
 const services = [
-  { icon: Droplets, title: "Damp & Mould Specialists", desc: "Diagnosis and treatment of damp, condensation and mould to protect occupants and building fabric." },
-  { icon: HardHat, title: "Asbestos Survey & Removal", desc: "Licensed inspections and safe removal that keep housing stock and public buildings compliant." },
-  { icon: Trash2, title: "Waste Management & Collection", desc: "Quick, reliable clearance and disposal — tackling fly-tipping and keeping public areas tidy." },
-  { icon: Wrench, title: "Property & Construction Management", desc: "General building repairs, upkeep and minor works for council-managed and private properties." },
-  { icon: CloudRain, title: "Guttering & Maintenance", desc: "High-level gutter clearing and washdowns that prevent water damage before costly repairs." },
-  { icon: Sparkles, title: "Professional Cleaning", desc: "Communal areas, voids and commercial spaces cleaned by uniformed, vetted teams." },
+  {
+    icon: Trash2,
+    title: "Waste Management",
+    desc: "Comprehensive, eco-friendly collection, recycling and disposal that meets regulatory requirements for domestic, industrial and construction waste.",
+    bullets: [
+      "Construction Waste — expert handling and disposal of building waste in line with environmental regulations.",
+      "Domestic Waste — safe, responsible collection to keep homes clean and tidy.",
+      "Industrial Waste — specialist solutions for hazardous and non-hazardous industrial waste with minimal environmental impact.",
+    ],
+  },
+  {
+    icon: Droplets,
+    title: "Damp, Condensation & Mould",
+    desc: "Expert testing, treatment and repair to protect occupants from health hazards and properties from structural damage.",
+    bullets: [
+      "Testing & Inspection — professional surveys to identify mould and moisture issues.",
+      "Repair & Prevention — moisture control, ventilation improvements and lasting repairs.",
+    ],
+  },
+  {
+    icon: HardHat,
+    title: "Licensed Asbestos Removal",
+    desc: "Fully certified asbestos services for residential, commercial and industrial properties, carried out to strict safety regulations.",
+    bullets: [
+      "Testing for Asbestos — accurate testing to confirm presence and type.",
+      "Sampling of Asbestos — safe collection and laboratory analysis.",
+      "Removal of Asbestos — careful, compliant removal with post-clearance reports.",
+    ],
+  },
+  {
+    icon: Sparkles,
+    title: "Professional Cleaning",
+    desc: "High-standard industrial, domestic and post-construction cleaning using advanced equipment and eco-friendly solutions.",
+    bullets: [
+      "Industrial Cleaning — thorough cleaning of factories, warehouses and large facilities.",
+      "Domestic Cleaning — deep cleaning of kitchens, bathrooms and living spaces.",
+      "Construction Cleaning — post-construction dust and debris removal to prepare sites for occupancy.",
+    ],
+  },
 ];
 
 const reasons = [
@@ -73,10 +107,10 @@ function Index() {
               <ShieldCheck className="h-3.5 w-3.5" /> Environment Agency Licensed · Merseyside
             </span>
             <h1 className="mt-5 text-4xl font-semibold leading-[1.05] md:text-6xl">
-              Safe environments. Stronger properties. Healthier communities.
+              Your trusted partner for environmental solutions.
             </h1>
             <p className="mt-5 max-w-xl text-base text-white/85 md:text-lg">
-              Dwellers Environmental Services is a Merseyside-based contractor supporting councils, housing providers and businesses with damp & mould, asbestos, waste, maintenance, guttering and professional cleaning.
+              Dweller Environmental Services is a trusted provider of high-quality, specialist services — waste management, damp & mould remediation, licensed asbestos works and professional cleaning — delivered with care for people and the environment.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={PHONE_HREF} className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-primary shadow-[var(--shadow-soft)] transition hover:bg-white/95">
@@ -108,17 +142,25 @@ function Index() {
       <section id="services" className="mx-auto max-w-6xl px-5 py-20 md:py-28">
         <div className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-wider text-primary">What we do</p>
-          <h2 className="mt-3 text-3xl font-semibold md:text-4xl">Environmental, property & cleaning specialists.</h2>
-          <p className="mt-4 text-muted-foreground">Six core service lines that keep estates, public spaces and commercial buildings safe, compliant and well maintained.</p>
+          <h2 className="mt-3 text-3xl font-semibold md:text-4xl">Specialist environmental & cleaning services.</h2>
+          <p className="mt-4 text-muted-foreground">Four core service lines, delivered by experienced teams following best practice for safety, compliance and sustainability.</p>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map(({ icon: Icon, title, desc }) => (
-            <article key={title} className="group rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:border-primary/30">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          {services.map(({ icon: Icon, title, desc, bullets }) => (
+            <article key={title} className="group rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:border-primary/30 md:p-8">
               <span className="inline-grid h-11 w-11 place-items-center rounded-xl bg-secondary text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
                 <Icon className="h-5 w-5" />
               </span>
-              <h3 className="mt-5 text-lg font-semibold">{title}</h3>
+              <h3 className="mt-5 text-xl font-semibold">{title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+              <ul className="mt-4 space-y-2">
+                {bullets.map((b) => (
+                  <li key={b} className="flex items-start gap-2 text-sm text-foreground/80">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>
@@ -193,6 +235,13 @@ function Index() {
                 <a href={EMAIL_HREF} className="text-sm text-white/80 hover:text-white break-all">{EMAIL}</a>
               </div>
             </div>
+        <div className="flex items-start gap-3">
+          <Globe className="mt-0.5 h-5 w-5 text-accent" />
+          <div>
+            <div className="text-sm font-semibold">Website</div>
+            <div className="text-sm text-white/80">{WEBSITE}</div>
+          </div>
+        </div>
             <div className="flex items-start gap-3">
               <Phone className="mt-0.5 h-5 w-5 text-accent" />
               <div>
@@ -213,8 +262,8 @@ function Index() {
 
       <footer className="border-t border-border bg-background">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 px-5 py-8 text-sm text-muted-foreground md:flex-row md:items-center">
-          <div>© {new Date().getFullYear()} Dwellers Environmental Services. All rights reserved.</div>
-          <div>Safe environments · Stronger properties · Healthier communities</div>
+          <div>© {new Date().getFullYear()} Dweller Environmental Services. All rights reserved.</div>
+          <div>Trusted · Reliable · Professional</div>
         </div>
       </footer>
     </div>
