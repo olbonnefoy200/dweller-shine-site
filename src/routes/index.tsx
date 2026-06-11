@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
-import { Phone, MapPin, Clock, ShieldCheck, Sparkles, Home, Building2, Wrench, Droplets, Trees, Check } from "lucide-react";
+import { Phone, MapPin, Mail, ShieldCheck, Sparkles, Droplets, HardHat, Trash2, Wrench, CloudRain, Check } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dweller Cleaning Services — Hornchurch & London" },
-      { name: "description", content: "Trusted domestic & commercial cleaning in Hornchurch and across London. End of tenancy, deep cleans, oven, gutters & more. Fully insured." },
-      { property: "og:title", content: "Dweller Cleaning Services" },
-      { property: "og:description", content: "Domestic & commercial cleaning specialists serving Hornchurch and London." },
+      { title: "Dwellers Environmental Services — Merseyside" },
+      { name: "description", content: "Safe environments, stronger properties, healthier communities. Damp & mould, asbestos, waste management, property maintenance, guttering and professional cleaning across Merseyside." },
+      { property: "og:title", content: "Dwellers Environmental Services" },
+      { property: "og:description", content: "Environment Agency licensed contractor serving councils, housing and businesses across Merseyside." },
     ],
   }),
   component: Index,
@@ -16,23 +16,25 @@ export const Route = createFileRoute("/")({
 
 const PHONE = "07523 805337";
 const PHONE_HREF = "tel:+447523805337";
+const EMAIL = "segunadedirandonald@gmail.com";
+const EMAIL_HREF = "mailto:segunadedirandonald@gmail.com";
 
 const services = [
-  { icon: Home, title: "End of Tenancy", desc: "Deposit-back cleans for tenants, landlords and letting agents. From £140 for a 1-bed flat." },
-  { icon: Sparkles, title: "Deep & Spring Cleaning", desc: "Top-to-bottom refresh that reaches every corner, skirting and surface." },
-  { icon: Building2, title: "Commercial Cleaning", desc: "Offices, retail and communal areas. Daytime, evening and out-of-hours slots." },
-  { icon: Wrench, title: "Builders Cleans", desc: "Post-construction dust, paint and debris removal — ready for handover." },
-  { icon: Droplets, title: "Oven, Gutter & Pressure Washing", desc: "Driveways, patios, gutters and ovens restored with professional kit." },
-  { icon: Trees, title: "Gardening & Maintenance", desc: "Light gardening, refurbishment and property maintenance available." },
+  { icon: Droplets, title: "Damp & Mould Specialists", desc: "Diagnosis and treatment of damp, condensation and mould to protect occupants and building fabric." },
+  { icon: HardHat, title: "Asbestos Survey & Removal", desc: "Licensed inspections and safe removal that keep housing stock and public buildings compliant." },
+  { icon: Trash2, title: "Waste Management & Collection", desc: "Quick, reliable clearance and disposal — tackling fly-tipping and keeping public areas tidy." },
+  { icon: Wrench, title: "Property & Construction Management", desc: "General building repairs, upkeep and minor works for council-managed and private properties." },
+  { icon: CloudRain, title: "Guttering & Maintenance", desc: "High-level gutter clearing and washdowns that prevent water damage before costly repairs." },
+  { icon: Sparkles, title: "Professional Cleaning", desc: "Communal areas, voids and commercial spaces cleaned by uniformed, vetted teams." },
 ];
 
 const reasons = [
-  "Fully insured, uniformed staff",
-  "Same-day response across London",
-  "References available on request",
-  "No job too small — one-offs welcome",
-  "Evening & weekend slots",
-  "Open 24 hours, 7 days a week",
+  "Environment Agency licensed",
+  "Registered on The Chest (NW Buyer Portal)",
+  "Local team, local suppliers",
+  "Fully insured & compliant",
+  "Ready for minor works & frameworks",
+  "Responsive across Merseyside",
 ];
 
 function Index() {
@@ -43,9 +45,9 @@ function Index() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
           <a href="#top" className="flex items-center gap-2">
             <span className="grid h-9 w-9 place-items-center rounded-lg" style={{ background: "var(--gradient-accent)" }}>
-              <Sparkles className="h-5 w-5 text-primary-foreground" />
+              <ShieldCheck className="h-5 w-5 text-primary-foreground" />
             </span>
-            <span className="text-lg font-semibold tracking-tight">Dweller<span className="text-primary"> Cleaning</span></span>
+            <span className="text-lg font-semibold tracking-tight">Dwellers<span className="text-primary"> Environmental</span></span>
           </a>
           <nav className="hidden items-center gap-8 text-sm font-medium text-muted-foreground md:flex">
             <a href="#services" className="hover:text-foreground">Services</a>
@@ -62,40 +64,40 @@ function Index() {
       {/* Hero */}
       <section id="top" className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Bright, clean living room" className="h-full w-full object-cover" width={1600} height={1200} />
+          <img src={heroImg} alt="Well-maintained residential properties" className="h-full w-full object-cover" width={1600} height={1200} />
           <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         </div>
         <div className="relative mx-auto max-w-6xl px-5 py-24 md:py-36">
           <div className="max-w-2xl text-primary-foreground">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-wider backdrop-blur">
-              <ShieldCheck className="h-3.5 w-3.5" /> Hornchurch · London · Fully Insured
+              <ShieldCheck className="h-3.5 w-3.5" /> Environment Agency Licensed · Merseyside
             </span>
             <h1 className="mt-5 text-4xl font-semibold leading-[1.05] md:text-6xl">
-              A spotless home, a polished workplace — done properly.
+              Safe environments. Stronger properties. Healthier communities.
             </h1>
             <p className="mt-5 max-w-xl text-base text-white/85 md:text-lg">
-              Dweller Cleaning Services are domestic & commercial cleaning specialists serving Hornchurch and Greater London. End of tenancy, deep cleans, maintenance and refurbishment — handled with care.
+              Dwellers Environmental Services is a Merseyside-based contractor supporting councils, housing providers and businesses with damp & mould, asbestos, waste, maintenance, guttering and professional cleaning.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={PHONE_HREF} className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-primary shadow-[var(--shadow-soft)] transition hover:bg-white/95">
                 <Phone className="h-4 w-4" /> {PHONE}
               </a>
               <a href="#contact" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10">
-                Request a quote
+                Request a capability sheet
               </a>
             </div>
             <div className="mt-10 grid grid-cols-3 gap-6 border-t border-white/20 pt-6 text-sm text-white/85">
               <div>
-                <div className="text-2xl font-semibold text-white">24/7</div>
-                <div>Always open</div>
+                <div className="text-2xl font-semibold text-white">Licensed</div>
+                <div>Environment Agency</div>
               </div>
               <div>
-                <div className="text-2xl font-semibold text-white">Same day</div>
-                <div>London response</div>
+                <div className="text-2xl font-semibold text-white">The Chest</div>
+                <div>NW Buyer Portal</div>
               </div>
               <div>
-                <div className="text-2xl font-semibold text-white">From £140</div>
-                <div>1-bed end of tenancy</div>
+                <div className="text-2xl font-semibold text-white">Local</div>
+                <div>Merseyside team</div>
               </div>
             </div>
           </div>
@@ -106,8 +108,8 @@ function Index() {
       <section id="services" className="mx-auto max-w-6xl px-5 py-20 md:py-28">
         <div className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-wider text-primary">What we do</p>
-          <h2 className="mt-3 text-3xl font-semibold md:text-4xl">Cleaning services tailored to your space.</h2>
-          <p className="mt-4 text-muted-foreground">From a quick one-off to a full end-of-tenancy clean, we bring uniformed staff, professional kit and a sharp eye for detail.</p>
+          <h2 className="mt-3 text-3xl font-semibold md:text-4xl">Environmental, property & cleaning specialists.</h2>
+          <p className="mt-4 text-muted-foreground">Six core service lines that keep estates, public spaces and commercial buildings safe, compliant and well maintained.</p>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map(({ icon: Icon, title, desc }) => (
@@ -126,10 +128,10 @@ function Index() {
       <section id="why" className="bg-secondary/60">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:grid-cols-2 md:py-28">
           <div>
-            <p className="text-sm font-medium uppercase tracking-wider text-primary">Why choose Dweller</p>
-            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">Reliable. Insured. First-class service.</h2>
+            <p className="text-sm font-medium uppercase tracking-wider text-primary">Why choose Dwellers</p>
+            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">A straightforward partner for councils & landlords.</h2>
             <p className="mt-4 text-muted-foreground">
-              We're a subsidiary of Dweller Solutions estate agency, so we understand exactly what landlords, tenants and businesses expect from a clean. Responsive, courteous and thorough — every visit.
+              We know how much pressure local councils are under to keep neighbourhoods clean, safe and well-maintained on tight budgets. We set up our services to be a reliable, no-nonsense partner that can step in and take care of the heavy lifting.
             </p>
             <a href={PHONE_HREF} className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition hover:opacity-90">
               <Phone className="h-4 w-4" /> Speak to the team
@@ -153,14 +155,14 @@ function Index() {
         <div className="grid gap-12 md:grid-cols-5">
           <div className="md:col-span-2">
             <p className="text-sm font-medium uppercase tracking-wider text-primary">About</p>
-            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">A reputable name in Hornchurch.</h2>
+            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">Investing in Merseyside.</h2>
           </div>
           <div className="space-y-4 text-muted-foreground md:col-span-3">
             <p>
-              Dweller Cleaning Services is a trusted local company offering end of tenancy cleaning, inventory, property maintenance, refurbishment and renovations across London.
+              Dwellers Environmental Services is a local contractor supporting community, housing and environmental projects across Merseyside — from damp and asbestos works to waste clearance, minor building works, guttering and professional cleaning.
             </p>
             <p>
-              We're very responsive to your needs and will usually respond on the same day within London. A 1-bedroom flat end of tenancy clean starts from £140 — call for an accurate quote on larger properties or commercial spaces.
+              Because we operate right here in Merseyside, we prioritise hiring local people, using local suppliers and making sure our waste disposal protects the local environment. We're already registered on The Chest (North West Buyer Portal) and ready to quote for minor works, upcoming frameworks or short-term projects.
             </p>
           </div>
         </div>
@@ -170,8 +172,8 @@ function Index() {
       <section id="contact" className="relative overflow-hidden bg-primary text-primary-foreground">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 md:grid-cols-2 md:py-28">
           <div>
-            <h2 className="text-3xl font-semibold md:text-4xl">Ready for a sparkling clean?</h2>
-            <p className="mt-4 max-w-md text-white/85">Call us for a friendly chat and a free, no-obligation quote. We cover Hornchurch, Havering and the whole of London.</p>
+            <h2 className="text-3xl font-semibold md:text-4xl">Let's work together.</h2>
+            <p className="mt-4 max-w-md text-white/85">Call or email for our capability sheet, a quote on minor works, or a quick chat about upcoming frameworks across Merseyside.</p>
             <a href={PHONE_HREF} className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-primary shadow-[var(--shadow-soft)] transition hover:bg-white/95">
               <Phone className="h-4 w-4" /> {PHONE}
             </a>
@@ -181,14 +183,14 @@ function Index() {
               <MapPin className="mt-0.5 h-5 w-5 text-accent" />
               <div>
                 <div className="text-sm font-semibold">Address</div>
-                <div className="text-sm text-white/80">203 Warren Drive, Hornchurch, RM12 4PL</div>
+                <div className="text-sm text-white/80">4 Pym Street, Merseyside, L4 5TH</div>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <Clock className="mt-0.5 h-5 w-5 text-accent" />
+              <Mail className="mt-0.5 h-5 w-5 text-accent" />
               <div>
-                <div className="text-sm font-semibold">Opening hours</div>
-                <div className="text-sm text-white/80">Open 24 hours · 7 days a week</div>
+                <div className="text-sm font-semibold">Email</div>
+                <a href={EMAIL_HREF} className="text-sm text-white/80 hover:text-white break-all">{EMAIL}</a>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -202,7 +204,7 @@ function Index() {
               <ShieldCheck className="mt-0.5 h-5 w-5 text-accent" />
               <div>
                 <div className="text-sm font-semibold">Coverage</div>
-                <div className="text-sm text-white/80">Hornchurch, Romford, Ilford, Upminster & Greater London</div>
+                <div className="text-sm text-white/80">Liverpool, Wirral, Sefton, Knowsley, St Helens & wider Merseyside</div>
               </div>
             </div>
           </div>
@@ -211,8 +213,8 @@ function Index() {
 
       <footer className="border-t border-border bg-background">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 px-5 py-8 text-sm text-muted-foreground md:flex-row md:items-center">
-          <div>© {new Date().getFullYear()} Dweller Cleaning Services. All rights reserved.</div>
-          <div>A subsidiary of Dweller Solutions.</div>
+          <div>© {new Date().getFullYear()} Dwellers Environmental Services. All rights reserved.</div>
+          <div>Safe environments · Stronger properties · Healthier communities</div>
         </div>
       </footer>
     </div>
