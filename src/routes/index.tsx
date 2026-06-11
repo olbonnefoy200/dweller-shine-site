@@ -1,5 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
+import wasteImg from "@/assets/service-waste.jpg";
+import dampImg from "@/assets/service-damp.jpg";
+import asbestosImg from "@/assets/service-asbestos.jpg";
+import cleaningImg from "@/assets/service-cleaning.jpg";
 import { Phone, MapPin, Mail, ShieldCheck, Sparkles, Droplets, HardHat, Trash2, Check, Globe } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -23,6 +27,7 @@ const WEBSITE = "www.dwellerenvironmental.com";
 const services = [
   {
     icon: Trash2,
+    image: wasteImg,
     title: "Waste Management",
     desc: "Comprehensive, eco-friendly collection, recycling and disposal that meets regulatory requirements for domestic, industrial and construction waste.",
     bullets: [
@@ -33,6 +38,7 @@ const services = [
   },
   {
     icon: Droplets,
+    image: dampImg,
     title: "Damp, Condensation & Mould",
     desc: "Expert testing, treatment and repair to protect occupants from health hazards and properties from structural damage.",
     bullets: [
@@ -42,6 +48,7 @@ const services = [
   },
   {
     icon: HardHat,
+    image: asbestosImg,
     title: "Licensed Asbestos Removal",
     desc: "Fully certified asbestos services for residential, commercial and industrial properties, carried out to strict safety regulations.",
     bullets: [
@@ -52,6 +59,7 @@ const services = [
   },
   {
     icon: Sparkles,
+    image: cleaningImg,
     title: "Professional Cleaning",
     desc: "High-standard industrial, domestic and post-construction cleaning using advanced equipment and eco-friendly solutions.",
     bullets: [
@@ -146,21 +154,33 @@ function Index() {
           <p className="mt-4 text-muted-foreground">Four core service lines, delivered by experienced teams following best practice for safety, compliance and sustainability.</p>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {services.map(({ icon: Icon, title, desc, bullets }) => (
-            <article key={title} className="group rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:border-primary/30 md:p-8">
-              <span className="inline-grid h-11 w-11 place-items-center rounded-xl bg-secondary text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
-                <Icon className="h-5 w-5" />
-              </span>
-              <h3 className="mt-5 text-xl font-semibold">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
-              <ul className="mt-4 space-y-2">
-                {bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-2 text-sm text-foreground/80">
-                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
+          {services.map(({ icon: Icon, title, desc, bullets, image }) => (
+            <article key={title} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:border-primary/30">
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-secondary">
+                <img
+                  src={image}
+                  alt={title}
+                  loading="lazy"
+                  width={1024}
+                  height={576}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6 md:p-8">
+                <span className="inline-grid h-11 w-11 place-items-center rounded-xl bg-secondary text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <h3 className="mt-5 text-xl font-semibold">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+                <ul className="mt-4 space-y-2">
+                  {bullets.map((b) => (
+                    <li key={b} className="flex items-start gap-2 text-sm text-foreground/80">
+                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </article>
           ))}
         </div>
