@@ -31,6 +31,11 @@ const services = [
     title: "Waste Management",
     desc: "Comprehensive, eco-friendly collection, recycling and disposal that meets regulatory requirements for domestic, industrial and construction waste.",
     bullets: [
+      "Landfill — compliant disposal and landfill management for non-recyclable materials.",
+      "Recycling — comprehensive sorting, processing and recycling to minimise environmental impact.",
+      "Scrap Yard — collection and processing of scrap metal and reusable materials.",
+      "Sewage Work — safe handling, treatment and disposal of sewage and wastewater.",
+      "Water Treatment — treatment solutions to ensure safe water discharge and environmental compliance.",
       "Construction Waste — expert handling and disposal of building waste in line with environmental regulations.",
       "Domestic Waste — safe, responsible collection to keep homes clean and tidy.",
       "Industrial Waste — specialist solutions for hazardous and non-hazardous industrial waste with minimal environmental impact.",
