@@ -3,8 +3,9 @@ import heroImg from "@/assets/hero.jpg";
 import wasteImg from "@/assets/service-waste.jpg";
 import dampImg from "@/assets/service-damp.jpg";
 import asbestosImg from "@/assets/service-asbestos.jpg";
+import propertyImg from "@/assets/service-property.jpg";
 import cleaningImg from "@/assets/service-cleaning.jpg";
-import { Phone, MapPin, Mail, ShieldCheck, Sparkles, Droplets, HardHat, Trash2, Check, Globe } from "lucide-react";
+import { Phone, MapPin, Mail, ShieldCheck, Sparkles, Droplets, HardHat, Trash2, Wrench, Check, Globe } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -60,6 +61,19 @@ const services = [
       "Testing for Asbestos — accurate testing to confirm presence and type.",
       "Sampling of Asbestos — safe collection and laboratory analysis.",
       "Removal of Asbestos — careful, compliant removal with post-clearance reports.",
+    ],
+  },
+  {
+    icon: Wrench,
+    image: propertyImg,
+    title: "Property Management",
+    desc: "Reliable property maintenance, repairs and minor building works to keep residential and commercial buildings safe and in good repair.",
+    bullets: [
+      "Property Maintenance — planned and reactive repairs for housing stock and commercial sites.",
+      "Guttering & Drainage — clearing, repairs and replacement to prevent water damage.",
+      "Fencing & Boundaries — installation and repair of fences, gates and perimeter works.",
+      "Minor Building Works — small repairs, making good and reinstatement after environmental works.",
+      "Planned Maintenance — scheduled programmes to help councils and landlords protect property value.",
     ],
   },
   {
