@@ -18,8 +18,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const PHONE = "07523 805337";
-const PHONE_HREF = "tel:+447523805337";
+const PHONE = "07337 018717";
+const PHONE_HREF = "tel:+447337018717";
 const EMAIL = "info@dwellerenvironmentalservice.com";
 const EMAIL_HREF = "mailto:info@dwellerenvironmentalservice.com";
 const WEBSITE = "www.dwellerenvironmental.com";
