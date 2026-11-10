@@ -134,7 +134,7 @@ function Index() {
         <section id="top" className="relative isolate overflow-hidden bg-hero-surface text-hero-foreground">
           <img src={heroImg} alt="Well-maintained residential properties" width={1600} height={1200} className="absolute inset-0 -z-20 h-full w-full object-cover" />
           <div className="hero-overlay absolute inset-0 -z-10" />
-          <div className="mx-auto max-w-6xl px-5 py-16 md:py-20">
+          <div className="mx-auto max-w-6xl px-5 py-10 md:py-20">
             <p className="flex items-center gap-2 text-xs font-semibold uppercase"><span className="h-2 w-2 bg-accent" /> Local expertise. Lasting care.</p>
             <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-tight md:text-6xl">Dweller<br />Environmental Services</h1>
             <p className="mt-5 max-w-xl text-lg font-medium">Safe environments. Stronger properties.<br className="hidden sm:block" /> Healthier communities.</p>
@@ -152,7 +152,7 @@ function Index() {
             </div>
           </div>
         </section>
-        <section id="services" className="mx-auto max-w-6xl px-5 py-16 md:py-20">
+        <section id="services" className="mx-auto max-w-6xl px-5 py-10 md:py-20">
           <p className="section-label">What we do</p>
           <h2 className="mt-3 max-w-3xl text-3xl font-bold md:text-4xl">Specialist care for your property<br className="hidden md:block" /> and the environment.</h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">Experienced local teams, with safety, compliance and sustainability at the heart of every job.</p>
