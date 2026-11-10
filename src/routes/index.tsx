@@ -10,15 +10,18 @@ import cleaningImg from "@/assets/service-cleaning.jpg";
 import { Phone, MapPin, Mail, ShieldCheck, Sparkles, Droplets, HardHat, Trash2, Wrench, Check, Globe } from "lucide-react";
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Dweller Environmental Services — Merseyside" },
       { name: "description", content: "Safe environments, stronger properties, healthier communities. Damp & mould, asbestos, waste management, property maintenance, guttering and professional cleaning across Merseyside." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "Dweller Environmental Services" },
+      { property: "og:title", content: "Dweller Environmental Services — Environmental & Property Services in Merseyside" },
+      { property: "og:url", content: "https://dweller-shine-site.lovable.app/" },
       { property: "og:description", content: "Environment Agency licensed contractor serving councils, housing and businesses across Merseyside." },
     ],
+    links: [{ rel: "canonical", href: "https://dweller-shine-site.lovable.app/" }],
   }),
   component: Index,
 });
