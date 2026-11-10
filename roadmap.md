@@ -4,6 +4,6 @@
 - [x] Verify desktop and mobile presentation and contact links.
 
 # SEO fixes
-- [ ] Describe services and location in the social-preview title.
-- [ ] Add crawler rules and a router-derived sitemap.
-- [ ] Verify the corrections and record findings as fixed.
+- [x] Describe services and location in the social-preview title.
+- [x] Add crawler rules and a router-derived sitemap.
+- [x] Verify the corrections and record findings as fixed.
