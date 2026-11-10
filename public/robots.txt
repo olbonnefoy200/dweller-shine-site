@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dweller-shine-site.lovable.app/sitemap.xml
