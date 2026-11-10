@@ -77,21 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Dweller Cleaning Services — Hornchurch & London" },
-      { name: "description", content: "Domestic & commercial cleaning specialists in Hornchurch and across London. End of tenancy, deep cleans, and more. Fully insured, same-day service." },
-      { property: "og:title", content: "Dweller Cleaning Services — Hornchurch & London" },
-      { property: "og:description", content: "Domestic & commercial cleaning specialists in Hornchurch and across London. End of tenancy, deep cleans, and more. Fully insured, same-day service." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Dweller Cleaning Services — Hornchurch & London" },
-      { name: "twitter:description", content: "Domestic & commercial cleaning specialists in Hornchurch and across London. End of tenancy, deep cleans, and more. Fully insured, same-day service." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7f90d501-2dd3-474f-8027-8d03f4cc977f/id-preview-62fcb6b6--2331ce83-05e9-4fba-b4b3-a8c2357a555d.lovable.app-1781042924099.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7f90d501-2dd3-474f-8027-8d03f4cc977f/id-preview-62fcb6b6--2331ce83-05e9-4fba-b4b3-a8c2357a555d.lovable.app-1781042924099.png" },
     ],
     links: [
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" },
       {
         rel: "stylesheet",
         href: appCss,
